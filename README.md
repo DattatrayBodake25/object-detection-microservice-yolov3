@@ -47,39 +47,49 @@ To successfully replicate this solution, ensure you have the following installed
 ```bash
 git clone https://github.com/DattatrayBodake25/object-detection-microservice-yolov3.git
 cd object-detection-microservice-yolov3
+```
 
-
-Install Dependencies
+### Install Dependencies
 Make sure to install the required Python packages. You can do this by running:
 ```bash
 pip install -r requirements.txt
+```
 
-Usage
+### Usage
 Running the Application
 You can run the application using the following command:
-
+```bash
 uvicorn ai_service:app --host 0.0.0.0 --port 8000
+```
 Once the server is running, you can access the web interface by navigating to http://127.0.0.1:8000/static/index.html in your web browser.
 
-Docker (Optional)
+### Docker (Optional)
 To run the application in a Docker container, you can build and run the container using the following commands:
 
 # Build the Docker image
+```bash
 docker build -t yolov3-object-detection .
+```
 
 # Run the Docker container
+```bash
 docker run -p 8000:8000 yolov3-object-detection
-Then access the web interface at http://127.0.0.1:8000/static/index.html.
+```
+Then access the web interface at
+```bash
+http://127.0.0.1:8000/static/index.html.
+```
 
-API Endpoints
+### API Endpoints
 1. Upload and Detect Objects
 Endpoint: /detect
 Method: POST
 Request: Multipart form-data containing the image file.
 Response: JSON object containing detected objects and their bounding boxes.
 Example Request:
+```bash
 curl -X POST "http://127.0.0.1:8000/detect" -F "file=@path_to_your_image.jpg"
-
+```
 2. Download Output Image
 Endpoint: /download/image
 Method: GET
@@ -89,12 +99,13 @@ Response: The processed output image with bounding boxes.
 Endpoint: /download/json
 Method: GET
 Response: A JSON file containing the detection results.
-Testing
+
+### Testing
 You can manually test the object detection functionality by uploading images through the web interface and reviewing the output images and JSON results.
 
 To create testing images, save them in the images for testing directory. This project is set up to handle multiple test images.
 
-Output
+### Output
 Upon successful detection, the application will generate:
 
 An output image (output_image.jpg) with bounding boxes drawn around detected objects.
@@ -103,8 +114,7 @@ A JSON file (detections.json) containing the detection results.
 ### Example Output Structure
 
 The output JSON structure will look like this:
-
-```json
+```bash
 {
   "detections": [
     {
@@ -114,7 +124,7 @@ The output JSON structure will look like this:
     }
   ]
 }
+```
 
-
-Contributing
+### Contributing
 Contributions are welcome! If you find any issues or have suggestions for improvement, feel free to open an issue or submit a pull request.

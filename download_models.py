@@ -1,13 +1,13 @@
-import requests
+import gdown
 import zipfile
 import os
 
-url = "https://drive.google.com/uc?export=download&id=1Ho9JjqPukM540JCS2mso_ugfoDPDKfyr"
-response = requests.get(url)
+# Google Drive file ID
+file_id = "1Ho9JjqPukM540JCS2mso_ugfoDPDKfyr"
+url = f"https://drive.google.com/uc?id={file_id}"
 
-# Save the zip file
-with open("yolov3.zip", "wb") as f:
-    f.write(response.content)
+# Download the file using gdown
+gdown.download(url, "yolov3.zip", quiet=False)
 
 # Unzip the file
 with zipfile.ZipFile("yolov3.zip", "r") as zip_ref:

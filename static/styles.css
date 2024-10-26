@@ -1,0 +1,190 @@
+/* Reset all elements */
+* {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+/* Global Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Set font family */
+    background-color: #121212; /* Dark background color */
+    color: #e0e0e0; /* Light text color */
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    min-height: 100vh; /* Full viewport height */
+}
+
+/* Container Styling */
+.container {
+    width: 90%; /* Full width with a maximum constraint */
+    max-width: 900px; /* Maximum width */
+    background: #1e1e2f; /* Container background color */
+    padding: 30px; /* Inner spacing */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+    transition: transform 0.2s ease-in-out; /* Smooth transition for hover effect */
+}
+.container:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+}
+
+/* Heading */
+h1 {
+    text-align: center; /* Center text */
+    font-size: 2rem; /* Heading size */
+    color: #61dafb; /* Heading color */
+    margin-bottom: 20px; /* Space below heading */
+}
+
+/* Upload Form */
+form {
+    display: flex; /* Flexbox layout for form */
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Center items vertically */
+    margin-bottom: 20px; /* Space below form */
+    padding: 15px; /* Inner spacing */
+    background: #2b2b3d; /* Background for form */
+    border-radius: 8px; /* Rounded corners */
+}
+
+input[type="file"] {
+    padding: 5px 10px; /* Inner spacing */
+    color: #ddd; /* Text color */
+    font-size: 0.9rem; /* Font size */
+    background: #3a3a55; /* Background color */
+    border: 1px solid #61dafb; /* Border style */
+    border-radius: 6px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth background change */
+}
+input[type="file"]:hover {
+    background: #61dafb; /* Change background on hover */
+    color: #121212; /* Change text color on hover */
+}
+
+button {
+    padding: 10px 20px; /* Inner spacing */
+    background: #61dafb; /* Background color */
+    color: #121212; /* Text color */
+    border: none; /* No border */
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-weight: bold; /* Bold text */
+    font-size: 0.9rem; /* Font size */
+    transition: background 0.3s ease; /* Smooth background change */
+}
+button:hover {
+    background: #4bb3e0; /* Change background on hover */
+}
+
+/* Confidence Filter */
+.filter {
+    text-align: center; /* Center filter section */
+    margin-bottom: 20px; /* Space below filter section */
+}
+
+input[type="number"],
+input[type="range"] {
+    width: 50%; /* Width of input fields */
+    padding: 8px; /* Inner spacing */
+    background: #3a3a55; /* Background color */
+    border: 1px solid #61dafb; /* Border style */
+    border-radius: 6px; /* Rounded corners */
+    color: #ddd; /* Text color */
+    margin-top: 10px; /* Space above inputs */
+}
+
+#filter-btn {
+    margin-top: 10px; /* Space above filter button */
+    padding: 8px 12px; /* Inner spacing */
+    background: #61dafb; /* Background color */
+    color: #121212; /* Text color */
+    border: none; /* No border */
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 0.8rem; /* Font size */
+}
+#filter-btn:hover {
+    background: #4bb3e0; /* Change background on hover */
+}
+
+/* Result Display */
+#result {
+    display: flex; /* Use flexbox for result display */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    gap: 20px; /* Space between items */
+}
+
+/* Image Display */
+img {
+    max-width: 100%; /* Responsive image width */
+    height: auto; /* Maintain aspect ratio */
+    border: 2px solid #61dafb; /* Border style */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+    transition: transform 0.2s ease; /* Smooth transform on hover */
+}
+img:hover {
+    transform: scale(1.03); /* Slightly enlarge image on hover */
+}
+
+/* JSON Display */
+pre {
+    background: #3a3a55; /* Background color for JSON */
+    color: #e0e0e0; /* Text color */
+    padding: 20px; /* Inner spacing */
+    border-radius: 8px; /* Rounded corners */
+    overflow: auto; /* Scroll if content overflows */
+    max-height: 300px; /* Maximum height */
+    width: 100%; /* Full width */
+    box-shadow: inset 0px 0px 15px rgba(0, 0, 0, 0.4); /* Inner shadow */
+}
+
+/* Download Links */
+.download-links {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-between; /* Space between download links */
+    width: 100%; /* Full width */
+    margin-top: 15px; /* Space above download links */
+}
+
+.download-btn {
+    color: #121212; /* Text color */
+    background: #61dafb; /* Background color */
+    padding: 10px 15px; /* Inner spacing */
+    border-radius: 8px; /* Rounded corners */
+    text-align: center; /* Center text */
+    text-decoration: none; /* No underline */
+    font-weight: bold; /* Bold text */
+    width: 48%; /* Width of buttons */
+    transition: background 0.3s ease; /* Smooth background change */
+}
+.download-btn:hover {
+    background: #4bb3e0; /* Change background on hover */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    form {
+        flex-direction: column; /* Stack form items vertically */
+    }
+
+    .download-links {
+        flex-direction: column; /* Stack download links vertically */
+    }
+
+    .download-btn {
+        width: 100%; /* Full width buttons */
+        margin-bottom: 10px; /* Space below buttons */
+    }
+
+    input[type="file"],
+    button,
+    #filter-btn {
+        width: 100%; /* Full width for inputs and buttons */
+        margin-top: 10px; /* Space above elements */
+    }
+}

@@ -1,0 +1,1 @@
+{"detections": [{"label": "dog", "confidence": 0.9357708692550659, "bbox": [131, 226, 310, 536]}, {"label": "bicycle", "confidence": 0.9306704998016357, "bbox": [123, 126, 565, 419]}, {"label": "truck", "confidence": 0.792045533657074, "bbox": [467, 75, 689, 170]}]}

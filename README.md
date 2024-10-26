@@ -65,12 +65,12 @@ Once the server is running, you can access the web interface by navigating to ht
 ### Docker (Optional)
 To run the application in a Docker container, you can build and run the container using the following commands:
 
-# Build the Docker image
+### Build the Docker image
 ```bash
 docker build -t yolov3-object-detection .
 ```
 
-# Run the Docker container
+### Run the Docker container
 ```bash
 docker run -p 8000:8000 yolov3-object-detection
 ```

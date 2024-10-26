@@ -60,7 +60,7 @@ You can run the application using the following command:
 ```bash
 uvicorn ai_service:app --host 0.0.0.0 --port 8000
 ```
-Once the server is running, you can access the web interface by navigating to http://127.0.0.1:8000/static/index.html in your web browser.
+Once the server is running, you can access the web interface by navigating to http://127.0.0.1:8000 in your web browser.
 
 ### Docker (Optional)
 To run the application in a Docker container, you can build and run the container using the following commands:

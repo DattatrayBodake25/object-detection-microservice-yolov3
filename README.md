@@ -12,7 +12,6 @@ This project implements a microservice for object detection using the YOLOv3 mod
 - [Testing](#testing)
 - [Output](#output)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Features
 
